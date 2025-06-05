@@ -1,9 +1,12 @@
-var path = require('path');
-
 module.exports = {
-  extends: ['plugin:prettier/recommended'],
-  plugins: ['prettier'],
+  extends: [
+    'plugin:react/recommended', // React rules
+    'plugin:@typescript-eslint/recommended', // TS rules
+    'plugin:prettier/recommended' // Prettier plugin
+  ],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
+    'react/react-in-jsx-scope': 'off',
     'class-methods-use-this': 'off',
     'react/jsx-filename-extension': [
       1,
@@ -17,7 +20,7 @@ module.exports = {
     semi: 0,
     'import/prefer-default-export': 0,
     'space-infix-ops': 0,
-    'no-unused-vars': 2,
+    'no-unused-vars': ['warn', { args: 'none' }],
     'react/function-component-definition': [
       2,
       {
