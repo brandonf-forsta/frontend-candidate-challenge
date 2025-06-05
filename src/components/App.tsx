@@ -19,7 +19,9 @@ const App = ({ initialTodos }: AppProps) => {
   const [editingId, setEditingId] = useState<string | null>(null);
 
   const addTodo = (text: string) => {
-    if (!text) return;
+    const trimmedTxt = text.trim();
+
+    if (!trimmedTxt) return;
 
     const id = generateUniqueId();
 
