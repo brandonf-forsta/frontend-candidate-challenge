@@ -4,7 +4,8 @@ const colors = {
   brightBlue: '#00a8f0',
   white: '#FFF',
   darkGray: '#333',
-  semiTransparentWhite: 'rgba(255,255,255,.5)'
+  semiTransparentWhite: 'rgba(255,255,255,.5)',
+  black: '#000000'
 };
 
 export default colors;
